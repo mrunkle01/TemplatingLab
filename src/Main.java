@@ -37,7 +37,10 @@ class Recipe<T extends Ingredient>{
         _ingredients.add(ingredient);
     }
     public void print(){
-        System.out.println("Ingredients: "+_ingredients+ "instructions: "+ _instructions+" recipe name: "+_recipeName);
+        System.out.print("Ingredients: ");
+        for(T ingredient : _ingredients)
+            System.out.print(ingredient.getName() + " " + ingredient.getQuantity());
+        System.out.println(" instructions: "+ _instructions+" recipe name: "+_recipeName);
     }
 }
 
@@ -50,6 +53,7 @@ public class Main {
         r1.print();
         Recipe r2 = new Recipe("cake","7,8,9",2);
         r2.addIngredient(li);
+        r2.print();
 
     }
 }
