@@ -48,8 +48,8 @@ public class Main {
         Recipe r1 = new Recipe("bread","1,2,3,4,5",1);
         r1.addIngredient(si);
         r1.print();
-        Recipe r2 = new Recipe("bread","1,2,3,4,5",1);
-
+        Recipe r2 = new Recipe("cake","7,8,9",2);
+        r2.addIngredient(li);
 
     }
 }
